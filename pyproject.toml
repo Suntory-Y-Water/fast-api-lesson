@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "demo-app"
+version = "0.1.0"
+description = "FastAPI demo app"
+authors = ["none"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.108.0"
+uvicorn = {extras = ["standard"], version = "^0.25.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
