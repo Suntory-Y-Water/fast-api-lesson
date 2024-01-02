@@ -50,5 +50,16 @@ docker-compose exec fast-api-lesson poetry add sqlalchemy aiomysql
 
 # api モジュールの migrate_db スクリプトを実行する
 docker-compose exec fast-api-lesson poetry run python -m api.migrate_db
+
+# Pytestを非同期用に拡張する、 pytest-asyncio をインストール
+docker-compose exec fast-api-lesson poetry add -G dev pytest-asyncio aiosqlite httpx
+
+# 新しくパッケージとかインストールしたら実施する
+docker-compose build --no-cache
 ```
 
+``` bash
+# test
+docker-compose run --entrypoint "poetry run pytest" fast-api-lesson
+
+```

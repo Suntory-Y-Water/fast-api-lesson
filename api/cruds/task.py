@@ -18,7 +18,7 @@ async def get_tasks_with_done(db: AsyncSession) -> list[tuple[int, str, bool]]:
 
 
 async def create_task(db: AsyncSession, task_create: task_schema.TaskCreate) -> task_model.Task:
-    task = task_model.Task(**task_create.dict())
+    task = task_model.Task(**task_create.model_dump())
     db.add(task)
     await db.commit()
     await db.refresh(task)
