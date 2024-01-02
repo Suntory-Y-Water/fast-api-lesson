@@ -1,14 +1,16 @@
 [tool.poetry]
-name = "demo-app"
+name = "fast-api-lesson"
 version = "0.1.0"
-description = "FastAPI demo app"
-authors = ["none"]
+description = ""
+authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 fastapi = "^0.108.0"
 uvicorn = {extras = ["standard"], version = "^0.25.0"}
+sqlalchemy = "^2.0.24"
+aiomysql = "^0.2.0"
 
 
 [build-system]
